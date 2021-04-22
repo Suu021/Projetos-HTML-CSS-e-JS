@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+    <style>
+        body{
+            background-color:darkgray;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <p> a ordem das tags &lt;source&gt; importa! é sempre do menor para o maior</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="Imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="imagem grande">
+    </picture>
+    <hr>
+    <h1>Reproduzindo audio</h1>
+    <h2>Pelo jeito mais simples</h2>
+    <p>Para reproduzir audio em HTML5 podemos usar a tag &lt;audio&gt; com os parâmetros <q>src</q> para selecionar o arquivo e <q>controls</q> para que o usuário aperte o play, como mostrado a seguir</p>
+    <audio src="Midias/Gearhead - Kevin MacLeod.mp3" controls></audio>
+    <p>Você também pode trocar o parâmetro <q>controls</q> pelo parâmetro <q>autoplay</q> para tocar o audio sem precisar apertar o play, mas isso pode não funcionar em alguns navegadores.</p>
+    <h3>Créditos da música Gearhead</h3>
+    <p>A música utilizada neste site se chama Gearhead, disponível na biblioteca de audios do youtube.</p>
+    <blockquote>
+        Gearhead de Kevin MacLeod é licenciada de acordo com a licença Atribuição 4.0 da Creative Commons. <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>
+            <br>Fonte: <a href="http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100221">http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100221</a><br>
+        
+            Artista: <a href="http://incompetech.com/">http://incompetech.com/</a>
+    </blockquote>
+    <br>
+    <h2>Pelo jeito mais sofisticado</h2>
+    <p>Se estiver tendo problemas com o formato do audio, é possível configurar para que o navegador tente reproduzir vários formatos do mesmo audio, e, se não for possível, disponibilize para o usuário a opção de download.</p>
+    <p>Para isso usamos, de novo, a tag &lt;audio&gt;, mas sem o parâmetro <q>scr</q>, e sim, com os parâmetros <q>preload</q> configurado para <q>metadata</q> (para o site carregar todo o audio apenas quando o usuário apertar o play, deixa menos pesado) e o <q>controls</q> (ou <q>autoplay</q>, como preferir...), com as tags &lt;source&gt; e seus parâmetros <q>src</q> (para selecionar o arquivo) e <q>type</q> (para selecionar o tipo de arquivo) para cada formato de audio. O HTML5 suporta os formatos MP3, OGG (formato open source) e WAV (muito pesado, não recomendável). Novamente: A ordem das tags &lt;source&gt; IMPORTA!</p>
+    <audio preload="metadata" controls>
+        <source src="Midias/guanacast-33.mp3" type="audio/mpeg">
+        <source src="Midias/guanacast-33.ogg" type="audio/ogg">
+        <source src="Midias/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente o seu navegador não consegue reproduzir audio. <a href="Midias/guanacast-33.mp3">Clique aqui</a> se quiser baixar o arquivo mp3 no seu dispositivo</p>
+    </audio>
+    <h3>Créditos do podcast</h3>
+    <p>Obrigada, prof <strong>Gustavo Guanabara</strong>, por disponibilizar esse podcast para seus alunos!</p>
+</body>
+</html>
