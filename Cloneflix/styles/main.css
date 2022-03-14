@@ -1,0 +1,128 @@
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* elementos base*/
+
+body {
+    background-color: var(--preto);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    position: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: darkgray;
+    margin-right: 10px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+header nav a:hover {
+    color: aliceblue;
+}
+
+.submit-line {
+    position: relative;
+    width: 200px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+#pesquisar{
+    width: 100%;
+    height: 25px;
+    background-color: lightgrey;
+}
+
+#botao{
+    position:absolute;
+    top:4px; right:5px;
+    border:none;
+    background:transparent;
+    cursor: pointer;
+}
+
+/*Conteúdo destaque*/
+
+.conteudo-destaque {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .20), rgba(0, 0, 0, .50)100%), url('../imagens/vikings-valhalla.jpg');
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.conteudo-destaque .descricao {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.conteudo-destaque .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+/*Destaques*/
+
+.box-midia{
+    height: 80%;
+    width: 80%;
+    display: block;
+    cursor: pointer;
+}
+
+.box-midia:hover {
+    zoom: 100%;   
+}
+
+.carrosel-destaques{
+    margin-top: 5px;
+}
